@@ -1,62 +1,54 @@
-import calculator.Calculator;
+package calculator;
+
 import static org.junit.Assert.*;
-import org.junit.Test;
+
+import org.junit.*;
 
 public class CalculatorTest {
-    private static final double DELTA = 1e-15;
-    Calculator calculator = new Calculator();
 
-    @Test
-    public void addingTruePositive(){
-        assertEquals("Adding two integer numbers for True Positive", 4, calculator.add(2, 2), DELTA);
-        assertEquals("Adding two double numbers for True Positive", 5.3, calculator.add(2.1, 3.2), DELTA);
-    }
+		private calcDevops calculator;
+	    
+	    @Before
+	    public void setUp() {
+	        calculator = new calcDevops();
+	    }
 
-    @Test
-    public void addingFalsePositive(){
-        assertNotEquals("Adding two integer numbers for False Positive", 6, calculator.add(2, 2), DELTA);
-        assertNotEquals("Adding two double numbers for False Positive", 7.3, calculator.add(2.1, 3.2), DELTA);
-    }
-
-    @Test
-    public void subtractingTruePositive(){
-        assertEquals("Subtracting two integer numbers for True Positive", 0, calculator.subtract(2, 2), DELTA);
-        assertEquals("Subtracting two double numbers for True Positive", -1.1, calculator.subtract(2.1, 3.2), DELTA);
-    }
-
-    @Test
-    public void subtractingFalsePositive(){
-        assertNotEquals("Subtracting two integer numbers for False Positive", 6, calculator.subtract(2, 2), DELTA);
-        assertNotEquals("Subtracting two double numbers for False Positive", -7.3, calculator.subtract(2.1, 3.2), DELTA);
-    }
-
-    @Test
-    public void multiplyingTruePositive(){
-        assertEquals("Multiplying two integer numbers for True Positive", 4, calculator.multiply(2, 2), DELTA);
-        assertEquals("Multiplying two double numbers for True Positive", 6.72, calculator.multiply(2.1, 3.2), DELTA);
-    }
-
-    @Test
-    public void multiplyingFalsePositive(){
-        assertNotEquals("Multiplying two integer numbers for False Positive", 6, calculator.multiply(2, 2), DELTA);
-        assertNotEquals("Multiplying two double numbers for False Positive", 7.3, calculator.multiply(2.1, 3.2), DELTA);
-    }
-
-    @Test
-    public void dividingTruePositive(){
-        assertEquals("Dividing two integer numbers for True Positive", 1, calculator.divide(2, 2), DELTA);
-        assertEquals("Dividing two double numbers for True Positive", Double.NaN, calculator.divide(0, 0), DELTA);
-        assertEquals("Dividing two double numbers for True Positive", Double.POSITIVE_INFINITY, calculator.divide(1, 0), DELTA);
-        assertEquals("Dividing two double numbers for True Positive", Double.NEGATIVE_INFINITY, calculator.divide(-1, 0), DELTA);
-    }
-
-    @Test
-    public void dividingFalsePositive(){
-        assertNotEquals("Dividing two integer numbers for True Positive", 1, calculator.divide(2.3, 1.3), DELTA);
-        assertNotEquals("Dividing two double numbers for True Positive", 0, calculator.divide(0, 0), DELTA);
-        assertNotEquals("Dividing two double numbers for True Positive", 1, calculator.divide(1, 0), DELTA);
-        assertNotEquals("Dividing two double numbers for True Positive", -1, calculator.divide(-1, 0), DELTA);
-    }
-
-
+		@Test
+	    public void testSqrRoot() {
+	        double a = 101;
+	        double expectedResult = 10.0498756;
+	        double result = calculator.sqrRoot(a);
+	        Assert.assertEquals(expectedResult, result, 2);
+	    }
+		
+		@Test
+		public void testFactorial() {
+		double a = 10;
+	        double expectedResult = 3628800;
+	        double result = calculator.factorial(a);
+	        Assert.assertEquals(expectedResult, result, 0);
+		}
+		
+		@Test
+		public void testLogarithm() {
+		double a = 10;
+	        double expectedResult = 1;
+	        double result = calculator.logarithm(a);
+	        Assert.assertEquals(expectedResult, result, 0);
+		}
+		
+		@Test
+		public void testPower() {
+		double a = 2;
+		double b = -1;
+	        double expectedResult = 0.5;
+	        double result = calculator.power(a, b);
+	        Assert.assertEquals(expectedResult, result, 1);
+		}
+		
+		@Test(expected = IllegalArgumentException.class)
+	    	public void testSqrRootOfNegative() {
+	        int a = -2;
+	        calculator.sqrRoot(a);
+	    }
 }

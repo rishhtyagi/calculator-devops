@@ -1,108 +1,111 @@
-package calculator;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Calculator {
-    private static final Logger logger = LogManager.getLogger(Calculator.class);
+public class calcDevops {
 
-    public Calculator() {
+    // res+choice-out
+
+    public static void displResult(double res) {
+        System.out.println("\n==>Output is " + res);
+    }
+
+    public static double sqrRoot(Double num) {
+        if (num < 0) {
+            throw new IllegalArgumentException("Number cannot be negative!");
+        } else {
+            double res = Math.sqrt(num);
+            return res;
+        }
+    }
+
+    public static long factorial(int num) {
+        long res = 1;
+        for (int i = num; i >= 2; i--)
+            res = res * i;
+        return res;
+    }
+
+    public static double logarithm(Double num) {
+        if (num < 0) {
+            throw new IllegalArgumentException("Number cannot be negative!");
+        } else {
+            double res = Math.log(num);
+            return res;
+        }
+    }
+
+    public static double power(double base, double power) {
+        double res = Math.pow(base, power);
+        return res;
     }
 
     public static void main(String[] args) {
-        Calculator calculator = new Calculator();
-        Scanner scanner = new Scanner(System.in);
-        double number1, number2;
+        Scanner sc = new Scanner(System.in);
+        int choice, inputNum;
+        double dnum;
+
         do {
-            System.out.println("Calculator-DevOps, Choose to perform operation");
-            System.out.print("Press 1 to Add\nPress 2 to Subtract\nPress 3 to Multiply\nPress 4 to Divide\n" +
-                    "Press any other key to exit\nEnter your choice: ");
-            int choice;
-            try {
-                choice = scanner.nextInt();
-            } catch (InputMismatchException error) {
-                return;
-            }
-            try {
-                System.out.print("Enter the first number : ");
-                number1 = scanner.nextDouble();
-                System.out.print("Enter the second number : ");
-                number2 = scanner.nextDouble();
-            } catch (InputMismatchException error) {
-                logger.error("Invalid input, Entered input is not a number");
-                return;
-            }
+            System.out.println("************************************************\n");
+            System.out.println("...Devops Calculator...");
+            System.out.println("1. Square Root");
+            System.out.println("2. Factorial");
+            System.out.println("3. Natural logarithm");
+            System.out.println("4. Power function");
+            System.out.println("0. Exit");
+            System.out.println("\nChoose an operation: ");
+
+            choice = sc.nextInt();
+
             switch (choice) {
                 case 1:
-                    // do addition
-                    System.out.println("Addition result is : " + calculator.add(number1, number2));
+                    System.out.println("Enter a number for Square Root:");
+                    dnum = sc.nextDouble();
+                    try {
+                        displResult(sqrRoot(dnum));
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     break;
+
                 case 2:
-                    // do subtraction
-                    System.out.println("Subtraction result is : " + calculator.subtract(number1, number2));
+                    System.out.println("Enter a number for Factorial:");
+                    inputNum = sc.nextInt();
+                    displResult(factorial(inputNum));
                     break;
+
                 case 3:
-                    // do multiplication
-                    System.out.println("Multiplication result is : " + calculator.multiply(number1, number2));
+                    System.out.println("Enter a number for Log");
+                    dnum = sc.nextDouble();
+
+                    try {
+                        displResult(logarithm(dnum));
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     break;
+
                 case 4:
-                    // do division
-                    System.out.println("Division result is : " + calculator.divide(number1, number2));
+                    System.out.println("Enter the base number");
+                    double base = sc.nextDouble();
+                    System.out.println("Enter the power number");
+                    double power = sc.nextDouble();
+
+                    try {
+                        displResult(power(base, power));
+                    } catch (Exception e) {
+                        System.out.println(e);
+                    }
                     break;
+
+                case 0:
+                    System.out.println("...Thank you for using Devops Calculator...");
+                    break;
+
                 default:
-                    System.out.println("Exiting....");
-                    return;
+                    System.out.println("Invalid option!");
+                    break;
             }
-        } while (true);
-    }
 
+        } while (choice != 0);
 
-    public double add(double number1, double number2) {
-        logger.info("[ADDITION] - " + number1 + ", " + number2);
-        double result = number1 + number2;
-        logger.info("[RESULT - ADDITION] - " + result);
-        return result;
-    }
-
-    public double subtract(double number1, double number2) {
-        logger.info("[SUBTRACTION] - " + number1 + ", " + number2);
-        double result = number1 - number2;
-        logger.info("[RESULT - SUBTRACTION] - " + result);
-        return result;
-    }
-
-
-    public double multiply(double number1, double number2) {
-        logger.info("[MULTIPLICATION] - " + number1 + ", " + number2);
-        double result = number1 * number2;
-        logger.info("[RESULT - MULTIPLICATION] - " + result);
-        return result;
-    }
-
-    public double divide(double number1, double number2) {
-        double result = 0;
-        try {
-            logger.info("[DIVISION] - " + number1 + ", " + number2);
-            if (number1 == 0 && number2 == 0) {
-                result = Double.NaN;
-                throw new ArithmeticException("Case of NaN 0.0/0.0");
-            } else if (number1 > 0 && number2 == 0) {
-                result = Double.POSITIVE_INFINITY;
-                throw new ArithmeticException("Case of Positive Infinity 1.0/0.0");
-            } else if (number1 <= -1 && number2 == 0) {
-                result = Double.NEGATIVE_INFINITY;
-                throw new ArithmeticException("Case of Negative Infinity -1.0/0.0");
-            } else {
-                result = number1 / number2;
-            }
-        } catch (ArithmeticException error) {
-            logger.error("[EXCEPTION - DIVISION] - Cannot be divided by ZERO " + error.getLocalizedMessage());
-        } finally {
-            logger.info("[RESULT - DIVISION] - " + result);
-        }
-        return result;
     }
 }
