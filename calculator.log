@@ -1,0 +1,48 @@
+16/Mar/2021:16:49:05 682 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 6
+16/Mar/2021:16:49:05 725 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 3628800
+16/Mar/2021:16:49:05 727 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 1
+16/Mar/2021:16:49:05 731 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 2.302585092994046
+16/Mar/2021:16:49:05 732 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: -Infinity
+16/Mar/2021:16:49:05 733 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 0.0
+16/Mar/2021:16:49:05 735 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 0.9932517730102834
+16/Mar/2021:16:49:05 737 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 2.302585092994046
+16/Mar/2021:16:49:05 738 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 0.0
+16/Mar/2021:16:49:05 739 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 6
+16/Mar/2021:16:49:05 741 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 3628800
+16/Mar/2021:16:49:05 742 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 1
+16/Mar/2021:16:49:05 742 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 1
+16/Mar/2021:16:49:05 744 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 16.0
+16/Mar/2021:16:49:05 745 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 0.0
+16/Mar/2021:16:49:05 746 [calcDevops.java] [INFO] calc.calcDevops Ans for power: NaN
+16/Mar/2021:16:49:05 748 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 16.0
+16/Mar/2021:16:49:05 748 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 0.0
+16/Mar/2021:16:49:05 749 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 9.0
+16/Mar/2021:16:49:05 751 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 5.0
+16/Mar/2021:16:49:05 752 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 10.0
+16/Mar/2021:16:49:05 754 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 9.486832980505138
+16/Mar/2021:16:49:05 755 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 9.486832980505138
+16/Mar/2021:16:49:05 756 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 5.0990195135927845
+16/Mar/2021:17:35:07 635 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 6
+16/Mar/2021:17:35:07 660 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 3628800
+16/Mar/2021:17:35:07 661 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 1
+16/Mar/2021:17:35:07 666 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 2.302585092994046
+16/Mar/2021:17:35:07 668 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: -Infinity
+16/Mar/2021:17:35:07 669 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 0.0
+16/Mar/2021:17:35:07 671 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 0.9932517730102834
+16/Mar/2021:17:35:07 672 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 2.302585092994046
+16/Mar/2021:17:35:07 673 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 0.0
+16/Mar/2021:17:35:07 675 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 6
+16/Mar/2021:17:35:07 676 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 3628800
+16/Mar/2021:17:35:07 678 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 1
+16/Mar/2021:17:35:07 679 [calcDevops.java] [INFO] calc.calcDevops Ans for factorial: 1
+16/Mar/2021:17:35:07 681 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 16.0
+16/Mar/2021:17:35:07 682 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 0.0
+16/Mar/2021:17:35:07 683 [calcDevops.java] [INFO] calc.calcDevops Ans for power: NaN
+16/Mar/2021:17:35:07 684 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 16.0
+16/Mar/2021:17:35:07 686 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 0.0
+16/Mar/2021:17:35:07 687 [calcDevops.java] [INFO] calc.calcDevops Ans for power: 9.0
+16/Mar/2021:17:35:07 689 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 5.0
+16/Mar/2021:17:35:07 690 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 10.0
+16/Mar/2021:17:35:07 692 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 9.486832980505138
+16/Mar/2021:17:35:07 693 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 9.486832980505138
+16/Mar/2021:17:35:07 694 [calcDevops.java] [INFO] calc.calcDevops Ans for sqr root: 5.0990195135927845
