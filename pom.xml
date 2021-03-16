@@ -5,7 +5,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>calculator-devops</artifactId>
+    <artifactId>Calculator</artifactId>
+         <name>calculator-devops</name>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
