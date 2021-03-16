@@ -1,9 +1,9 @@
 ---
-- name: Pull and Run docker image of nayan16/devopscalc
+- name: Pull and Run docker image
   hosts: all
   tasks:
-    - name: Pull rishabhtyagi22/calculator
+    - name: Pull rishabhtyagi22/calcrepo
       docker_image:
-        name: rishabhtyagi22/calculator
+        name: rishabhtyagi22/calcrepo
         source: pull
   
